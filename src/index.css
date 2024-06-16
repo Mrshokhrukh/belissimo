@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+  .header_green_icons {
+    @apply flex items-center justify-center cursor-pointer bg-lightgreen p-3 py-0 h-[48px] rounded-sm max-h-[48px];
+  }
+  .inside_green_icon {
+    @apply text-green text-2xl cursor-pointer;
+  }
+}
+
+body {
+  font-family: Poppins;
+}

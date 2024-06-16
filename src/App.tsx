@@ -1,10 +1,13 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "./Components/Header";
 type AppProps = {};
 
 const App: React.FC<AppProps> = () => {
   return (
     <div>
-      <h1 className="text-blue-500 underline text-3xl font-bold">hello 1</h1>
+      <Header />
+      <Outlet />
     </div>
   );
 };
