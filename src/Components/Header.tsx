@@ -9,7 +9,7 @@ type HeaderProps = {};
 const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="w-full bg-white">
-      <div className="max-w-xl bg-white m-auto p-[20px]">
+      <div className="max-w-xl bg-white m-auto py-[20px]">
         <div id="header_left_elements" className="flex items-center gap-6">
           <img src={logo} alt="" className="max-w-[180px] max-h-[47px]" />
 
@@ -30,14 +30,14 @@ const Header: React.FC<HeaderProps> = () => {
               <IoCall className="inside_green_icon" />
               <span className="text-xl font-semibold text-green">1173</span>
             </div>
-            <p className="text-[13px] text-lightgray leading-4 cursor-default">
+            <p className="text-[13px] text-lightgray leading-4 cursor-default hidden md:block">
               Yangi aloqa <br /> markazi
             </p>
           </div>
 
           <div className="header_green_icons flex gap-2">
             <TbTruckDelivery className="inside_green_icon" />
-            <p className="text-[10px] text-lightgray cursor-default">
+            <p className="text-[10px] text-lightgray cursor-default hidden lg:block">
               40 daqiqa ichida tekin yetkazib <br /> beramiz yoki pitsa bepul
             </p>
           </div>
