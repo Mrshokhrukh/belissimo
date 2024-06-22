@@ -7,10 +7,10 @@ type LocationInfoCategoryProps = {};
 const LocationInfoCategory: React.FC<LocationInfoCategoryProps> = () => {
   return (
     <div className="flex gap-3 justify-between">
-      <div className="bg-cartbtnred">
+      <div className="">
         <ToggleLocation />
       </div>
-      <div className="bg-cartbtnred">
+      <div className="bg-lightgray">
         <DeliveryField />
       </div>
     </div>

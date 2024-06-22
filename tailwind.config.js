@@ -16,6 +16,7 @@ export default {
       toggleshadow: "0 4px 8px rgba(0,0,0,.06)",
     },
     colors: {
+      white: "#ffffff",
       green: "#047857",
       graybtn: "#ebebeb",
       cartbtnred: "#ff002b",
