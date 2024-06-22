@@ -5,15 +5,13 @@ type ToggleLocationProps = {};
 const ToggleLocation: React.FC<ToggleLocationProps> = () => {
   const [isPickDelivery, setIsPickDelivery] = useState(false);
   return (
-    <div className="flex items-center h-[57px] w-[455px] relative rounded-[50px] bg-toggleColor p-1">
+    <div className="flex items-center h-[52px] w-full max-w-[515px] relative rounded-[50px] bg-toggleColor p-1">
       <div
         id="whitetoggler"
         className={`${
           isPickDelivery ? "left-[49%]" : "left-[1%]"
         } bg-white cursor-pointer absolute transition-all duration-300 shadow-toggleshadow rounded-[50px] w-[50%] h-[86%]`}
-      >
-        {/* {isPickDelivery ? "Olib kelish" : "Yetkazib berish"} */}
-      </div>
+      ></div>
       <div
         className={`${
           isPickDelivery ? "text-lightgray" : "text-black"

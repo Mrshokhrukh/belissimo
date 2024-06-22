@@ -9,7 +9,8 @@ export default {
     },
     width: {},
     borderColor: {
-      lightborder: "1px solid #f4f4f4",
+      lightborder: "#f4f4f4",
+      orangeborder: "#ffc600",
     },
     boxShadow: {
       cardshadow: `5px 2px 30px hsla(257,8%,83%,.3)`,
@@ -24,6 +25,7 @@ export default {
       toggleColor: "#f4f4f4",
       lightgreen: "#ecfdf5",
       lightgray: "#64748b",
+      orange: "#ffc600",
     },
   },
   plugins: [],

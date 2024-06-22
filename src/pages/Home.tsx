@@ -6,13 +6,12 @@ type HomeProps = {};
 
 const Home: React.FC<HomeProps> = () => {
   return (
-    <div className="">
+    <div className="p-2.5">
       <div className="w-full">
         <Carousel />
       </div>
       <section className="max-w-xl m-auto">
         <LocationInfoCategory />
-        
       </section>
     </div>
   );
