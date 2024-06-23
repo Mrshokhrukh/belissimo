@@ -26,6 +26,7 @@ export default {
       lightgreen: "#ecfdf5",
       lightgray: "#64748b",
       orange: "#ffc600",
+      lightorange: "#fffbee",
     },
   },
   plugins: [],
