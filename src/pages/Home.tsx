@@ -1,6 +1,8 @@
 import React from "react";
 import Carousel from "../Components/Carousel";
 import LocationInfoCategory from "../Components/LocationInfoCategory";
+import Categories from "../Components/Categories";
+import Products from "../Components/Products";
 
 type HomeProps = {};
 
@@ -11,7 +13,15 @@ const Home: React.FC<HomeProps> = () => {
         <Carousel />
       </div>
       <section className="max-w-xl m-auto">
-        <LocationInfoCategory />
+        <div>
+          <LocationInfoCategory />
+        </div>
+        <div className="mt-10">
+          <Categories />
+        </div>
+        <div className="mt-10">
+          <Products />
+        </div>
       </section>
     </div>
   );
