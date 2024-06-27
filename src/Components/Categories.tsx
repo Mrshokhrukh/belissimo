@@ -9,7 +9,7 @@ const Categories = () => {
   };
 
   return (
-    <div className="max-w-xl w-[100%] flex items-center justify-between py-1.5">
+    <div className="max-w-xl w-[100%] flex items-center justify-between py-2">
       <div className="flex gap-4 overflow-x-auto w-full" id="scrollnav">
         {categories.map((val: any, i) => {
           return (
