@@ -35,12 +35,12 @@ const Home: React.FC<HomeProps> = () => {
       </section>
       <section
         ref={headerRef}
-        className={`flex items-center gap-4 mt-10 w-[100%] m-auto sticky top-0 bg-white z-50 px-20 ${
+        className={`flex items-center justify-center gap-4 mt-10 w-[100%] m-auto sticky top-0 bg-white z-50 px-4  ${
           isSticky ? "shadow-headShadow" : ""
         }`}
       >
         <img
-          className={` ${isSticky ? `w-[35px]` : "w-[0px]"} transition-all duration-200`}
+          className={` ${isSticky ? `ml-6 w-[35px]` : "w-[0px]"} transition-all duration-200`}
           src="https://bellissimo.uz/_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75"
           alt=""
         />

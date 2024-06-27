@@ -21,7 +21,6 @@
 
 body {
   font-family: Poppins;
-  overflow-x: hidden;
 }
 
 .slider-container {
@@ -33,4 +32,17 @@ body {
 }
 #slide img {
   height: 100% !important;
+}
+
+#scrollnav::-webkit-scrollbar {
+  background-color: red;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  /* Customize the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  /* Customize the scrollbar thumb */
 }
