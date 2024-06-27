@@ -1,5 +1,6 @@
 interface Props {
   product: any;
+  key: number;
 }
 
 const Card = ({ product }: Props) => {

@@ -11,13 +11,14 @@ const Categories = () => {
   return (
     <div className="max-w-xl w-[100%] flex items-center justify-between py-1.5">
       <div className="flex gap-4 overflow-x-auto w-full" id="scrollnav">
-        {categories.map((val: any) => {
+        {categories.map((val: any, i) => {
           return (
             <div
               className={`${
                 activeCategory === val ? "bg-green text-white" : "hover:bg-hoverGreen"
               }  py-[5px] px-3.5 bg-graybtn text-sm capitalize rounded-full cursor-pointer transition duration-150`}
               onClick={() => handleClick(val)}
+              key={i}
             >
               {val}
             </div>
