@@ -1,12 +1,24 @@
+import { useState } from "react";
 import { categories } from "../db/data";
 
 const Categories = () => {
+  const [activeCategory, setActiveCategory] = useState("combo");
+  const handleClick = (val: string) => {
+    window.location.href = `#${val}`;
+    setActiveCategory(val);
+  };
+
   return (
-    <div className="flex items-center justify-between">
+    <div className="w-[100%] flex items-center justify-between py-2">
       <div className="flex gap-4">
         {categories.map((val: any) => {
           return (
-            <div className="py-1.5 px-3.5 bg-graybtn text-sm capitalize rounded-full cursor-pointer hover:bg-lightgreen transition duration-150">
+            <div
+              className={`${
+                activeCategory === val ? "bg-green text-white" : "hover:bg-hoverGreen"
+              }  py-1.5 px-3.5 bg-graybtn text-sm capitalize rounded-full cursor-pointer transition duration-150`}
+              onClick={() => handleClick(val)}
+            >
               {val}
             </div>
           );

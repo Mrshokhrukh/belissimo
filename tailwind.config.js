@@ -15,6 +15,7 @@ export default {
     boxShadow: {
       cardshadow: `5px 2px 30px hsla(257,8%,83%,.3)`,
       toggleshadow: "0 4px 8px rgba(0,0,0,.06)",
+      headShadow: `5px 0 15px rgba(0, 0, 0, .2)`,
     },
     colors: {
       white: "#ffffff",
@@ -24,6 +25,7 @@ export default {
       cardDescColor: "#828282",
       toggleColor: "#f4f4f4",
       lightgreen: "#ecfdf5",
+      hoverGreen: "#04785752",
       lightgray: "#64748b",
       orange: "#ffc600",
       lightorange: "#fffbee",
