@@ -9,8 +9,8 @@ const Categories = () => {
   };
 
   return (
-    <div className="max-w-xl w-[100%] flex items-center justify-between py-2">
-      <div className="flex gap-4 overflow-x-auto w-full" id="scrollnav">
+    <div className="max-w-xl w-[100%] flex items-center justify-between py-2 relative">
+      <div className="flex gap-4 overflow-x-auto"  id="scrollnav">
         {categories.map((val: any, i) => {
           return (
             <div

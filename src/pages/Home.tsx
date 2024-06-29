@@ -14,6 +14,13 @@ const Home: React.FC<HomeProps> = () => {
     if (headerRef.current) {
       setIsSticky(headerRef.current.getBoundingClientRect().top <= 0);
     }
+    if (isSticky) {
+      headerRef.current.style = `
+      background: rgba(255, 255, 255, 0.37);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(14.7px);
+      -webkit-backdrop-filter: blur(14.7px);`;
+    }
   };
 
   useEffect(() => {
@@ -35,7 +42,7 @@ const Home: React.FC<HomeProps> = () => {
       </section>
       <section
         ref={headerRef}
-        className={`flex items-center md:justify-center gap-4 mt-10 w-[100%] m-auto sticky top-0 bg-white z-50 ${
+        className={`flex items-center md:justify-center gap-4 mt-10 w-[100%] m-auto sticky top-0 bg-white z-50  ${
           isSticky ? "shadow-headShadow" : ""
         }`}
       >
