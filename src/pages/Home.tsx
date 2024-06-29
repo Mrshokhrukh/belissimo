@@ -28,14 +28,14 @@ const Home: React.FC<HomeProps> = () => {
       <div className="w-full">
         <Carousel />
       </div>
-      <section className="max-w-xl m-auto">
-        <div>
+      <section className="max-w-xl m-auto px-2">
+        <div className="">
           <LocationInfoCategory />
         </div>
       </section>
       <section
         ref={headerRef}
-        className={`flex items-center justify-center gap-4 mt-10 w-[100%] m-auto sticky top-0 bg-white z-50 px-4  ${
+        className={`flex items-center md:justify-center gap-4 mt-10 w-[100%] m-auto sticky top-0 bg-white z-50 ${
           isSticky ? "shadow-headShadow" : ""
         }`}
       >
