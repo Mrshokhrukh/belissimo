@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoCall } from "react-icons/io5";
 import { TiLocation } from "react-icons/ti";
 import { TbTruckDelivery } from "react-icons/tb";
@@ -9,10 +9,13 @@ import { GoChevronDown } from "react-icons/go";
 
 import uz from "../assets/Flag_of_Uzbekistan.svg";
 import rus from "../assets/images.png";
+import { ChangeCategory } from "../hooks/ContextProvider";
 
 type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = () => {
+  const { setIsAuthModalOpen } = useContext(ChangeCategory);
+
   return (
     <header className="w-full bg-white px-2">
       <div className="max-w-xl bg-white m-auto py-[20px] flex items-center justify-between">
@@ -57,7 +60,10 @@ const Header: React.FC<HeaderProps> = () => {
           <div>
             <img src={halal} alt="" className="hidden lg:block h-[48px] cursor-pointer" />
           </div>
-          <div className="hover:bg-lightgreen hover:text-green border-green border transition duration-300  px-7 py-2.5 text-white font-semibold cursor-pointer bg-green rounded-3xl flex items-center justify-center">
+          <div
+            className="hover:bg-lightgreen hover:text-green border-green border transition duration-300  px-7 py-2.5 text-white font-semibold cursor-pointer bg-green rounded-3xl flex items-center justify-center"
+            onClick={() => setIsAuthModalOpen(true)}
+          >
             Kirish
           </div>
         </div>
