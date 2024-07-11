@@ -18,7 +18,7 @@ const LocationInfoCategory: React.FC<LocationInfoCategoryProps> = () => {
           <div className="relative cursor-pointer block md:hidden">
             <img
               src="https://bellissimo.uz/images/cart-icon-black.svg"
-              className=" w-[21px] cursor-pointer"
+              className="w-[21px] cursor-pointer"
               alt=""
             />
             <span

@@ -11,7 +11,7 @@ const Categories = ({ isSticky }: { isSticky: boolean }) => {
   return (
     <div className="max-w-xl w-[100%] flex items-center py-2 relative px-2 md:px-0">
       <img
-        className={` ${isSticky ? `ml-6 w-[35px]` : "w-[0px]"} transition-all duration-200  mr-4`}
+        className={` ${isSticky ? `w-[28px] md:w-[35px] md:ml-6` : "w-[0px]"} transition-all duration-200 mr-4`}
         src="https://bellissimo.uz/_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75"
         alt=""
       />
