@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { categories } from "../db/data";
 
-const Categories = () => {
+const Categories = ({ isSticky }: { isSticky: boolean }) => {
   const [activeCategory, setActiveCategory] = useState("combo");
   const handleClick = (val: string) => {
     window.location.href = `#${val}`;
@@ -9,8 +9,13 @@ const Categories = () => {
   };
 
   return (
-    <div className="max-w-xl w-[100%] flex items-center justify-between py-2 relative">
-      <div className="flex gap-4 overflow-x-auto" id="scrollnav">
+    <div className="max-w-xl w-[100%] flex items-center py-2 relative">
+      <img
+        className={` ${isSticky ? `ml-6 w-[35px]` : "w-[0px]"} transition-all duration-200  mr-4`}
+        src="https://bellissimo.uz/_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75"
+        alt=""
+      />
+      <div className="flex gap-4 overflow-x-auto w-[70%] md:w-[85%]" id="scrollnav">
         {categories.map((val: any, i) => {
           return (
             <div

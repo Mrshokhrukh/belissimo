@@ -35,7 +35,9 @@ const AuthModal: React.FC<AuthModalProps> = () => {
 
   const checkNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formattedValue = formatPhoneNumber(e.target.value);
+
     setAuthNumber(formattedValue);
+
     if (formattedValue.length === 17) {
       setIsFill(true);
     } else setIsFill(false);

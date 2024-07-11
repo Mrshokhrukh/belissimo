@@ -46,13 +46,7 @@ const Home: React.FC<HomeProps> = () => {
           isSticky ? "shadow-headShadow" : ""
         }`}
       >
-        <img
-          className={` ${isSticky ? `ml-6 w-[35px]` : "w-[0px]"} transition-all duration-200`}
-          src="https://bellissimo.uz/_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75"
-          alt=""
-        />
-
-        <Categories />
+        <Categories isSticky={isSticky} />
       </section>
       <section className="max-w-xl m-auto">
         <div className="mt-10">
