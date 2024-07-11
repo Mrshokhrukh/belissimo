@@ -9,7 +9,7 @@ const ToggleLocation: React.FC<ToggleLocationProps> = () => {
   const { setDeliveryText } = useContext(ChangeCategory);
 
   return (
-    <div className="flex items-center h-[52px] w-full relative rounded-[50px] bg-toggleColor p-1">
+    <div className="flex items-center h-[52px] w-[80%] md:w-[100%] relative rounded-[50px] bg-toggleColor p-1">
       <div
         id="whitetoggler"
         className={`${
@@ -19,7 +19,7 @@ const ToggleLocation: React.FC<ToggleLocationProps> = () => {
       <div
         className={`${
           isPickDelivery ? "text-lightgray" : "text-black"
-        } absolute w-[50%] left-0 flex items-center justify-center transition-all duration-500 font-medium text-sm cursor-pointer`}
+        } absolute w-[50%] text-center left-0 flex items-center justify-center transition-all duration-500 font-medium text-sm cursor-pointer`}
         onClick={() => {
           setIsPickDelivery(false);
           setDeliveryText("Yetkazib berish manzili tanlang");
@@ -30,7 +30,7 @@ const ToggleLocation: React.FC<ToggleLocationProps> = () => {
       <div
         className={`${
           isPickDelivery ? "text-black" : "text-lightgray"
-        } absolute w-[50%] right-0 flex items-center justify-center transition-all duration-500 font-medium text-sm cursor-pointer `}
+        } absolute w-[50%] text-center right-0 flex items-center justify-center transition-all duration-500 font-medium text-sm cursor-pointer `}
         onClick={() => {
           setIsPickDelivery(true);
           setDeliveryText("Filialni tanlang");

@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = () => {
   const { setIsAuthModalOpen } = useContext(ChangeCategory);
 
   return (
-    <header className="w-full bg-white px-2">
+    <header className="w-full bg-white px-2 hidden md:block">
       <div className="max-w-xl bg-white m-auto py-[20px] flex items-center justify-between">
         <div id="header_left_elements" className="flex items-center gap-6">
           <img src={logo} alt="" className="max-w-[180px] max-h-[47px]" />

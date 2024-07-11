@@ -11,7 +11,7 @@ type CarouselProps = {};
 
 const Carousel: React.FC<CarouselProps> = () => {
   return (
-    <div className="h-[410px] min-w-full">
+    <div className="h-[410px] min-w-full hidden md:block">
    
     </div>
   );

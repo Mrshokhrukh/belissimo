@@ -35,7 +35,7 @@ const Home: React.FC<HomeProps> = () => {
       <div className="w-full">
         <Carousel />
       </div>
-      <section className="max-w-xl m-auto px-2">
+      <section className="max-w-xl m-auto px-2 mt-5">
         <div className="">
           <LocationInfoCategory />
         </div>
@@ -49,7 +49,7 @@ const Home: React.FC<HomeProps> = () => {
         <Categories isSticky={isSticky} />
       </section>
       <section className="max-w-xl m-auto">
-        <div className="mt-10">
+        <div className="mt-10 px-3">
           <Products />
         </div>
       </section>
