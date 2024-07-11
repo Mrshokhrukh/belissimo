@@ -20,7 +20,7 @@ const ToggleLocation: React.FC<ToggleLocationProps> = () => {
         className={`${
           isPickDelivery ? "text-lightgray" : "text-black"
         } absolute w-[50%] text-center left-0 flex items-center justify-center transition-all duration-500 font-medium text-sm cursor-pointer`}
-        onClick={() => {
+        onMouseEnter={() => {
           setIsPickDelivery(false);
           setDeliveryText("Yetkazib berish manzili tanlang");
         }}
@@ -31,7 +31,7 @@ const ToggleLocation: React.FC<ToggleLocationProps> = () => {
         className={`${
           isPickDelivery ? "text-black" : "text-lightgray"
         } absolute w-[50%] text-center right-0 flex items-center justify-center transition-all duration-500 font-medium text-sm cursor-pointer `}
-        onClick={() => {
+        onMouseEnter={() => {
           setIsPickDelivery(true);
           setDeliveryText("Filialni tanlang");
         }}

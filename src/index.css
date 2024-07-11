@@ -16,6 +16,8 @@
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none !important;
   /* background-color: ; */
 }
 
