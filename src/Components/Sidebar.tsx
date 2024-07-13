@@ -1,5 +1,7 @@
 import React from "react";
 import { IoClose } from "react-icons/io5";
+import LocationSelector from "./LocationSelector";
+import SidebarLogin from "./SidebarLogin";
 type SidebarProps = {};
 
 const Sidebar: React.FC<SidebarProps> = () => {
@@ -20,7 +22,8 @@ const Sidebar: React.FC<SidebarProps> = () => {
           <IoClose />
         </div>
 
-        asdas
+        <LocationSelector />
+        <SidebarLogin />
       </div>
     </div>
   );

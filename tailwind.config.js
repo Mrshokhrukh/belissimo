@@ -29,6 +29,7 @@ export default {
       lightgray: "#64748b",
       orange: "#ffc600",
       lightorange: "#fffbee",
+      black: "#000000",
     },
   },
   plugins: [],
