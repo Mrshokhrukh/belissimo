@@ -1,11 +1,23 @@
+import { useNavigate } from "react-router-dom";
+
 interface Props {
   product: any;
   key: number;
 }
 
 const Card = ({ product }: Props) => {
+  let navigate = useNavigate();
+  const navigateCombo = (id: number) => {
+    navigate(`/combo/${id}`);
+    localStorage.setItem("data-product", JSON.stringify(id));
+  };
   return (
-    <div className="h-[auto] hover:scale-[102%] p-3 transition duration-200 bg-white w-full rounded-xl shadow-cardshadow cursor-pointer">
+    <div
+      className="h-[auto] hover:scale-[102%] p-3 transition duration-200 bg-white w-full rounded-xl shadow-cardshadow cursor-pointer"
+      onClick={() => {
+        navigateCombo(product.id);
+      }}
+    >
       <img src={product.img} alt="" />
       <div className="px-1 mt-2 space-y-1">
         <h2 className="font-bold capitalize text-lg">{product.name}</h2>

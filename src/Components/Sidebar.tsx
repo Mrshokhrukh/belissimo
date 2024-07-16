@@ -3,13 +3,17 @@ import { IoClose } from "react-icons/io5";
 import LocationSelector from "./LocationSelector";
 import SidebarLogin from "./SidebarLogin";
 import SidebarLinks from "./SidebarLinks";
+import SidebarCallUs from "./SidebarCallUs";
+import SidebarLang from "./SidebarLang";
 type SidebarProps = {};
 
 const Sidebar: React.FC<SidebarProps> = () => {
-  let isSibebarOpen = true;
+  let isSibebarOpen = false;
   return (
     <div
-      className={`${isSibebarOpen ? "" : "hidden"} w-[100%] h-[100%] bg-black z-[100] fixed top-0 left-0 md:hidden`}
+      className={`${
+        isSibebarOpen ? "" : "hidden"
+      } w-[100%] h-[100%] bg-black z-[100] fixed top-0 left-0 md:hidden`}
       id="authmodal"
     >
       <div
@@ -24,6 +28,8 @@ const Sidebar: React.FC<SidebarProps> = () => {
         <LocationSelector />
         <SidebarLogin />
         <SidebarLinks />
+        <SidebarCallUs />
+        <SidebarLang />
       </div>
     </div>
   );

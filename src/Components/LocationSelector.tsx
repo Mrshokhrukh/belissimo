@@ -29,9 +29,12 @@ const LocationSelector: React.FC<LocationSelectorProps> = () => {
         <span className="text-2xl">{dropdownOpen ? <IoMdArrowDropup /> : <MdArrowDropDown />}</span>
       </div>
       <div className={`${dropdownOpen ? "" : "hidden"} transition-all duration-200 `}>
-        {cities.map((city: any) => {
+        {cities.map((city: any, i) => {
           return (
-            <p className="transition-all duration-200 font-light p-2.5 cursor-pointer hover:text-lightgray">
+            <p
+              key={i}
+              className="transition-all duration-200 font-light p-2.5 cursor-pointer hover:text-lightgray"
+            >
               {city}
             </p>
           );
