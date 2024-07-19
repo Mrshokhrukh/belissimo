@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { products } from "../db/data";
 
 interface Props {
   product: any;
@@ -8,7 +9,11 @@ interface Props {
 const Card = ({ product }: Props) => {
   let navigate = useNavigate();
   const navigateCombo = (id: number) => {
-    navigate(`/combo/${id}`);
+    let data = products?.find((val) => val.id === id);
+    if (data?.category === "combo") navigate(`/combo/${id}`);
+    else {
+      alert(id);
+    }
     localStorage.setItem("data-product", JSON.stringify(id));
   };
   return (
