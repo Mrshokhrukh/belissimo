@@ -12,6 +12,7 @@ export default {
       lightborder: "#f4f4f4",
       orangeborder: "#ffc600",
       gray1: "#828282",
+      green: "#047857",
     },
     boxShadow: {
       cardshadow: `5px 2px 30px hsla(257,8%,83%,.3)`,
