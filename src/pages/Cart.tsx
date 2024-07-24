@@ -2,9 +2,9 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import CartProduct from "../Components/CartProduct";
 
-type Props = {};
+// type Props = {};
 
-const Cart = (props: Props) => {
+const Cart = () => {
   let data = useSelector((state: RootState) => state.userCart);
 
   return (

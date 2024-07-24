@@ -2,9 +2,9 @@ import { FiEdit2 } from "react-icons/fi";
 import { ChangeCategory } from "../hooks/ContextProvider";
 import { useContext } from "react";
 
-type Props = {};
+// type Props = {};
 
-const MapEditField = (props: Props) => {
+const MapEditField = () => {
   const { deliveryText } = useContext(ChangeCategory);
   return (
     <div className="w-full max-w-[714px] text-sm font-medium h-[41px] cursor-pointer flex items-center justify-between px-4 border border-orangeborder rounded-xl text-orange bg-lightorange">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../db/data";
-import { MdKeyboardArrowRight } from "react-icons/md";
+// import { MdKeyboardArrowRight } from "react-icons/md";
 import ComboOptionSelection from "../Components/ComboOptionSelection";
 import ComboOptionModal from "../Components/ComboOptionModal";
 import ComboPriceAddToCart from "../Components/ComboPriceAddToCart";

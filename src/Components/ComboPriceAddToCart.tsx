@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 interface Props {
   productPrice: number;
@@ -6,7 +6,7 @@ interface Props {
 }
 
 const ComboPriceAddToCart = ({ productPrice, dicountPrice }: Props) => {
-  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+  const [isBtnDisabled] = useState(true);
 
   return (
     <div className="mt-10 space-y-3">

@@ -8,7 +8,7 @@ import halal from "../assets/halal.webp";
 import { GoChevronDown } from "react-icons/go";
 
 import uz from "../assets/Flag_of_Uzbekistan.svg";
-import rus from "../assets/images.png";
+// import rus from "../assets/images.png";
 import { ChangeCategory } from "../hooks/ContextProvider";
 import { useNavigate } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-const SidebarLinks = (props:{}) => {
+const SidebarLinks = () => {
   return (
     <div className="relative p-2 bg-graybtn mt-3 rounded-2xl">
         <div className="py-5 px-3 cursor-pointer hover:text-lightgray flex gap-3 items-center">

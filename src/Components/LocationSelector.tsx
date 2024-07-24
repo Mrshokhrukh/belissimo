@@ -14,7 +14,7 @@ let cities = [
   "Angren",
 ];
 const LocationSelector: React.FC<LocationSelectorProps> = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen] = useState(false);
 
   return (
     <div className="transition-all duration-200">
