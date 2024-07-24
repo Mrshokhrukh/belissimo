@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { categories } from "../db/data";
+import { useNavigate } from "react-router-dom";
 
 const Categories = ({ isSticky }: { isSticky: boolean }) => {
+  let navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState("combo");
   const handleClick = (val: string) => {
     window.location.href = `#${val}`;
@@ -15,10 +17,7 @@ const Categories = ({ isSticky }: { isSticky: boolean }) => {
         src="https://bellissimo.uz/_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75"
         alt=""
       />
-      <div
-        className={`flex gap-4 overflow-x-auto w-[95%] ${isSticky ? "w-[87%]" : ""}`}
-        id="scrollnav"
-      >
+      <div className={`flex gap-4 overflow-x-auto w-[95%] ${isSticky ? "w-[87%]" : ""}`} id="scrollnav">
         {categories.map((val: any, i) => {
           return (
             <div
@@ -36,6 +35,7 @@ const Categories = ({ isSticky }: { isSticky: boolean }) => {
       <div
         id="cart"
         className="hidden md:flex absolute right-2 w-[140px] py-1.5 bg-cartbtnred text-white rounded-full text-md font-normal cursor-pointer transition-all duration-300 hover:w-[160px] justify-center"
+        onClick={() => navigate("/cart")}
       >
         Savatcha | 0
       </div>

@@ -10,17 +10,18 @@ import { GoChevronDown } from "react-icons/go";
 import uz from "../assets/Flag_of_Uzbekistan.svg";
 import rus from "../assets/images.png";
 import { ChangeCategory } from "../hooks/ContextProvider";
+import { useNavigate } from "react-router-dom";
 
 type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = () => {
   const { setIsAuthModalOpen } = useContext(ChangeCategory);
-
+  let navigate = useNavigate();
   return (
     <header className="w-full bg-white px-2 hidden md:block">
       <div className="max-w-xl bg-white m-auto py-[20px] flex items-center justify-between">
         <div id="header_left_elements" className="flex items-center gap-6">
-          <img src={logo} alt="" className="max-w-[180px] max-h-[47px]" />
+          <img src={logo} alt="" className="max-w-[180px] max-h-[47px] cursor-pointer" onClick={() => navigate("/")} />
 
           <div className="flex gap-2">
             <div className="header_green_icons">

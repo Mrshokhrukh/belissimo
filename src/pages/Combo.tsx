@@ -4,6 +4,7 @@ import { products } from "../db/data";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import ComboOptionSelection from "../Components/ComboOptionSelection";
 import ComboOptionModal from "../Components/ComboOptionModal";
+import ComboPriceAddToCart from "../Components/ComboPriceAddToCart";
 
 type ComboProps = {};
 
@@ -13,21 +14,24 @@ const Combo: React.FC<ComboProps> = () => {
   const [comboFoodModalOpen, setComboFoodModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    const catchData = async () => {
-      let data = await products?.find((val) => String(val.id) === comboId);
+    const catchData = () => {
+      let data = products?.find((val) => String(val.id) === comboId);
       setProductData(data);
     };
 
     catchData();
-  }, [comboId]);
+  }, []);
 
   return (
-    <div className="flex gap-10 max-w-xxl mt-5">
+    <div className="flex gap-10 max-w-xxl mt-5 justify-around items-center">
       <img src={productData?.img} alt="" className="" />
-      <div className="flex flex-col gap-2 w-[100%]">
+      <div className="flex flex-col gap-2 w-[100%] max-w-[450px] pb-10">
         <ComboOptionModal ComboFoodModalOpen={comboFoodModalOpen} setComboModalOpen={setComboFoodModalOpen} />
         <ComboOptionSelection setComboModalOpen={setComboFoodModalOpen} />
         <ComboOptionSelection setComboModalOpen={setComboFoodModalOpen} />
+
+        <ComboOptionSelection setComboModalOpen={setComboFoodModalOpen} />
+        <ComboPriceAddToCart productPrice={productData?.price} dicountPrice={productData?.discountPrice}/>
       </div>
     </div>
   );

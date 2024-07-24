@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { products } from "../db/data";
+import { addProduct } from "../redux/CartSlice";
+import { useDispatch } from "react-redux";
 
 interface Props {
   product: any;
@@ -7,12 +9,13 @@ interface Props {
 }
 
 const Card = ({ product }: Props) => {
+  let dispatch = useDispatch();
   let navigate = useNavigate();
   const navigateCombo = (id: number) => {
     let data = products?.find((val) => val.id === id);
     if (data?.category === "combo") navigate(`/combo/${id}`);
     else {
-      alert(id);
+      dispatch(addProduct(id));
     }
     localStorage.setItem("data-product", JSON.stringify(id));
   };
@@ -41,6 +44,7 @@ const Card = ({ product }: Props) => {
           </div>
         )}
         <h1 className="font-semibold text-md">{product.price} so'm</h1>
+        <button className="bg-green">qo'sh</button>
       </div>
     </div>
   );
