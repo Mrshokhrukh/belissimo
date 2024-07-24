@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { categories } from "../db/data";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 const Categories = ({ isSticky }: { isSticky: boolean }) => {
+  let data = useSelector((state: RootState) => state.userCart);
+
   let navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState("combo");
   const handleClick = (val: string) => {
@@ -37,7 +41,7 @@ const Categories = ({ isSticky }: { isSticky: boolean }) => {
         className="hidden md:flex absolute right-2 w-[140px] py-1.5 bg-cartbtnred text-white rounded-full text-md font-normal cursor-pointer transition-all duration-300 hover:w-[160px] justify-center"
         onClick={() => navigate("/cart")}
       >
-        Savatcha | 0
+        Savatcha | {data.cart.length}
       </div>
     </div>
   );
