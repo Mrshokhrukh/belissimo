@@ -3,6 +3,7 @@ import { RootState } from "../redux/store";
 import CartProduct from "../Components/CartProduct";
 import CardRightSide from "../Components/CardRightSide";
 import CartIsEmpty from "../Components/CartIsEmpty";
+import ProductRecommendationInUserCart from "../Components/ProductRecommendationInUserCart";
 
 // type Props = {};
 
@@ -18,6 +19,7 @@ const Cart = () => {
               {data?.cart.map((pr: any, i: number) => {
                 return <CartProduct product={pr} key={i} />;
               })}
+              <ProductRecommendationInUserCart />
             </div>
             <div className="col-span-2 h-[200px]">
               <CardRightSide />

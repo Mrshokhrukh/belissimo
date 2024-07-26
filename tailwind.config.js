@@ -18,6 +18,7 @@ export default {
       cardshadow: `5px 2px 30px hsla(257,8%,83%,.3)`,
       toggleshadow: "0 4px 8px rgba(0,0,0,.06)",
       headShadow: `5px 0 15px rgba(0, 0, 0, .2)`,
+      recommended: "5px 2px 10px hsla(0,0%,87%,.88)",
     },
     colors: {
       white: "#ffffff",
