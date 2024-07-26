@@ -33,6 +33,8 @@ export default {
       lightorange: "#fffbee",
       black: "#000000",
       gray: "lightgray",
+      lightred: "#fff1f1",
+      blackgray: "#262a2c",
     },
   },
   plugins: [],

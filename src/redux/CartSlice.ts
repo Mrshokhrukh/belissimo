@@ -12,7 +12,7 @@ const cartSlice = createSlice({
                 state.cart.map((pr : any) => {
                     pr.quantity ++
                 });
-                
+
             } else {
                 try {
                     const data = products.find((item) => item.id === action.payload)
