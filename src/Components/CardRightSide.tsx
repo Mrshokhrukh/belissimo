@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+
 interface Props {}
 
 const CardRightSide = ({}) => {
+  let sum = useSelector((state: RootState) => state.userCart.totalSum);
   return (
     <div>
       <div className="flex gap-3">
@@ -14,7 +18,9 @@ const CardRightSide = ({}) => {
           Qo'llash
         </button>
       </div>
-      <p className="hidden bg-lightred font-light text-cartbtnred my-3 mx-4 rounded-md px-3 py-1">xato kiritldi</p>
+      <p className="hidden bg-lightred font-light text-cartbtnred my-3 mx-4 rounded-md px-3 py-1">
+        xato kiritldi
+      </p>
       <div className="p-4 px-5 bg-white shadow-cardshadow mt-5 flex flex-col gap-2 rounded-2xl">
         <div className="flex justify-between">
           <p className="font-light">Yetkazib berish</p>
@@ -22,9 +28,11 @@ const CardRightSide = ({}) => {
         </div>
         <div className="flex justify-between">
           <h2 className="font-semibold text-xl">Umumiy narx</h2>
-          <h2 className="font-semibold text-xl">423,000 so'm</h2>
+          <h2 className="font-semibold text-xl">{Number(sum)} so'm</h2>
         </div>
-        <button className="hover:bg-lightgreen transition-all duration-300 border-2 border-green hover:text-green bg-green p-3 rounded-full font-semibold text-white mt-5">Keyingisi</button>
+        <button className="hover:bg-lightgreen transition-all duration-300 border-2 border-green hover:text-green bg-green p-3 rounded-full font-semibold text-white mt-5">
+          Keyingisi
+        </button>
       </div>
     </div>
   );
