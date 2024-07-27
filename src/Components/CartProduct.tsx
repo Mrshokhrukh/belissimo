@@ -1,7 +1,7 @@
 import { FiPlus } from "react-icons/fi";
 import { FiMinus } from "react-icons/fi";
 import { useDispatch } from "react-redux";
-import { decreseQTY, increaseQTY } from "../redux/CartSlice";
+import { addProduct } from "../redux/CartSlice";
 type Props = {
   product: any;
 };
@@ -19,11 +19,11 @@ const CartProduct = ({ product }: Props) => {
       </div>
       <div className="flex flex-col gap-1 justify-center">
         <button className="rounded-xl p-1 bg-graybtn py-1.5 flex items-center justify-around">
-          <span className="cursor-pointer" onClick={() => dispatch(decreseQTY(product.id))}>
+          <span className="cursor-pointer" onClick={() => dispatch(addProduct(product.id))}>
             <FiMinus />
           </span>
           <p>{product?.quantity}</p>
-          <span className="cursor-pointer" onClick={() => dispatch(increaseQTY(product.id))}>
+          <span className="cursor-pointer" onClick={() => dispatch(addProduct(product.id))}>
             <FiPlus />
           </span>
         </button>
