@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 export const categories = [
   "combo",
   "pitsa",
@@ -10,7 +12,7 @@ export const categories = [
 
 export const products = [
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -20,7 +22,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -30,7 +32,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -40,7 +42,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -50,7 +52,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -60,7 +62,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -70,7 +72,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -80,7 +82,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -90,7 +92,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -100,7 +102,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -110,7 +112,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -120,7 +122,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -130,7 +132,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -140,7 +142,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -150,7 +152,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -160,7 +162,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -170,7 +172,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -180,7 +182,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -190,7 +192,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -200,7 +202,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "Do'stlar 1",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     discountPrice: "92,000",
@@ -210,7 +212,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -218,7 +220,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -226,7 +228,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -234,7 +236,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -242,7 +244,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -250,7 +252,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -258,7 +260,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -266,7 +268,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -274,7 +276,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -282,7 +284,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -290,7 +292,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -298,7 +300,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -306,7 +308,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -314,7 +316,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -322,7 +324,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -330,7 +332,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -338,7 +340,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -346,7 +348,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -354,7 +356,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -362,7 +364,7 @@ export const products = [
     img: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Fcd4ec26b-2bd5-4416-b50b-46e0f8ac5ed8.jpg&w=1920&q=100",
   },
   {
-    id: Math.random(),
+    id: uuidv4(),
     name: "belissimo",
     desc: "2 ta bellisster, 5 ta tovuqli strips va 2 ta razliv ichimlik — do’stlar bilan birga ayni muddao",
     price: "75000",
@@ -372,7 +374,7 @@ export const products = [
 ];
 
 export const user = {
-  id: Math.random(),
+  id: uuidv4(),
   name: "eshmat",
   cart: <any>[],
 };

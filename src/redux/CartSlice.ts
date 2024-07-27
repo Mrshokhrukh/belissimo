@@ -29,7 +29,6 @@ const cartSlice = createSlice({
     increaseQTY: (state, action) => {
       let decreased = state.cart.find((data: any) => data.id == action.payload);
       decreased.quantity++;
-      
     },
     decreseQTY: (state, action) => {
       let decreased = state.cart.find((data: any) => data.id == action.payload);
@@ -39,9 +38,9 @@ const cartSlice = createSlice({
       }
     },
     calculateSum: (state) => {
-      // state.totalSum = Number(data.price) * data.quantity;
-      console.log('working');
-      
+      state.totalSum = state.cart.reduce(
+        (a: any, b: any) => Number(a.price) * a.quantity + Number(b.price)
+      );
     },
   },
 });

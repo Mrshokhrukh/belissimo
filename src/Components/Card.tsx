@@ -12,7 +12,7 @@ const Card = ({ product }: Props) => {
   let dispatch = useDispatch();
   let navigate = useNavigate();
   const navigateCombo = (id: number) => {
-    let data = products?.find((val) => val.id === id);
+    let data = products?.find((val) => val.id === String(id));
     if (data?.category === "combo") navigate(`/combo/${id}`);
     else {
       dispatch(addProduct(id));
