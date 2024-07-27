@@ -44,7 +44,7 @@ const Card = ({ product }: Props) => {
           </div>
         )}
         <h1 className="font-semibold text-md">{product.price} so'm</h1>
-        <button className="bg-green">qo'sh</button>
+     
       </div>
     </div>
   );
