@@ -1,8 +1,8 @@
 import { products } from "../db/data";
 
-interface Props {}
+// interface Props {}
 
-const ProductRecommendationInUserCart = (props: Props) => {
+const ProductRecommendationInUserCart = () => {
   return (
     <div className="mt-5 pb-10">
       <p className="font-medium text-xl">Qo'shishni maslahat beramiz</p>
