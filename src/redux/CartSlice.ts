@@ -43,6 +43,9 @@ const cartSlice = createSlice({
       );
     },
   },
+  // extraReducers:{
+    
+  // }
 });
 
 export const { addProduct, decreseQTY, increaseQTY, calculateSum } = cartSlice.actions;

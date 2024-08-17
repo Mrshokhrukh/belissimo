@@ -14,6 +14,7 @@ const App: React.FC<AppProps> = () => {
         <Outlet />
         <AuthModal />
         <Sidebar />
+        
       </ContextProvider>
     </div>
   );

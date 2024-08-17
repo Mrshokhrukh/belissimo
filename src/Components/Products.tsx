@@ -1,8 +1,19 @@
 import { Fragment } from "react/jsx-runtime";
-import { categories, products } from "../db/data";
+import { categories } from "../db/data";
 import Card from "./Card";
+import { useQuery } from "react-query";
+import axios from "axios";
+import Loading from "./Loading";
 
 const Products = () => {
+  const { data, isLoading } = useQuery("products", () => {
+    return axios.get("https://bellissimo-avt2.onrender.com/get_all_products");
+  });
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <Fragment>
       {categories.map((category, i) => {
@@ -12,10 +23,10 @@ const Products = () => {
               {category}
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-              {products
-                ?.filter((val) => val.category == category)
-                .map((product) => {
-                  return <Card product={product} key={product.id} />;
+              {data?.data
+                // ?.filter((val: any) => val.category == category)
+                .map((product: any, i: number) => {
+                  return <Card product={product} key={i} />;
                 })}
             </div>
           </div>

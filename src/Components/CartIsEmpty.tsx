@@ -1,9 +1,7 @@
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 
-interface Props {}
-
-const CartIsEmpty = (props: Props) => {
+const CartIsEmpty = () => {
   let navigate = useNavigate();
   return (
     <div className="w-full mx-auto max-w-xl mt-10">
