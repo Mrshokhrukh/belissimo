@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import AuthModal from "./Components/AuthModal";
 import ContextProvider from "./hooks/ContextProvider";
 import Sidebar from "./Components/Sidebar";
+import ProductsModal from "./Components/ProductsModal";
 type AppProps = {};
 
 const App: React.FC<AppProps> = () => {
@@ -14,7 +15,7 @@ const App: React.FC<AppProps> = () => {
         <Outlet />
         <AuthModal />
         <Sidebar />
-        
+        <ProductsModal />
       </ContextProvider>
     </div>
   );
