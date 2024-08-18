@@ -1,6 +1,6 @@
 import { SlClose } from "react-icons/sl";
 import img from "../assets/94844930-5c66-4c12-a670-93b048169dbe.webp";
-import TogglePizzaSize from "./TogglePizzaSize";
+import Toggler from "./Toggler";
 interface Props {}
 
 const ProductsModal = ({}: Props) => {
@@ -39,7 +39,7 @@ const ProductsModal = ({}: Props) => {
           <div className="flex flex-col gap-4 flex-1 ml-2">
             <h1 className="font-semibold text-blackgray text-lg">Pitsa kattaligi</h1>
             <div>
-              <TogglePizzaSize />
+              <Toggler values={["Kichik", "O'rtacha", "Katta"]} />
             </div>
           </div>
         </div>
