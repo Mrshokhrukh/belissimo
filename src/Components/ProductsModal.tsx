@@ -1,5 +1,6 @@
 import { SlClose } from "react-icons/sl";
 import img from "../assets/94844930-5c66-4c12-a670-93b048169dbe.webp";
+import TogglePizzaSize from "./TogglePizzaSize";
 interface Props {}
 
 const ProductsModal = ({}: Props) => {
@@ -23,7 +24,7 @@ const ProductsModal = ({}: Props) => {
                 ko‘rishni xush ko‘ruvchilar uchun nihoyatda mos keladi 🙃
               </p>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 h-[80px] overflow-auto">
               <h1 className="font-semibold text-blackgray text-[16px]">
                 Tanlangan bort: <span className="text-sm font-normal ml-2 text-lightgray">Oddiy bort</span>
               </h1>
@@ -31,14 +32,14 @@ const ProductsModal = ({}: Props) => {
                 Masalliqlar: <span className="text-sm font-normal ml-2 text-lightgray">pomidor bodring go'sht</span>
               </h1>
             </div>
-            <div className="">
+            <div>
               <h1 className="font-semibold text-3xl text-blackgray">124,000 so'm</h1>
             </div>
           </div>
           <div className="flex flex-col gap-4 flex-1 ml-2">
             <h1 className="font-semibold text-blackgray text-lg">Pitsa kattaligi</h1>
             <div>
-                
+              <TogglePizzaSize />
             </div>
           </div>
         </div>
