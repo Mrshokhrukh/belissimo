@@ -36,6 +36,8 @@ export default {
       gray: "lightgray",
       lightred: "#fff1f1",
       blackgray: "#262a2c",
+      grayReal: "gray",
+      orangeDisable: "",
     },
   },
   plugins: [],

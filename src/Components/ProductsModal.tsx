@@ -1,9 +1,12 @@
 import { SlClose } from "react-icons/sl";
 import img from "../assets/94844930-5c66-4c12-a670-93b048169dbe.webp";
 import Toggler from "./Toggler";
+import { useState } from "react";
+import ProductModalMasalliqlar from "./ProductModalMasalliqlar";
 interface Props {}
 
 const ProductsModal = ({}: Props) => {
+  const [selectPizzaSize, setSelectSize] = useState("");
   const modal = true;
   return (
     <div
@@ -14,7 +17,7 @@ const ProductsModal = ({}: Props) => {
     >
       <div className="relative p-8 w-[900px] h-[600px] bg-white shadow-cardshadow rounded-3xl">
         <SlClose className="absolute right-4 top-4 text-3xl cursor-pointer" onClick={() => ""} />
-        <div className="flex gap-1 px-2 mt-3">
+        <div className="flex gap-1 px-2 mt-3 relative">
           <div className="flex flex-col gap-4 flex-1">
             <img src={img} className="max-w-[380px] object-cover cursor-pointer" alt="" />
             <div className="border-b border-b-lightborder pb-4 space-y-2">
@@ -36,11 +39,30 @@ const ProductsModal = ({}: Props) => {
               <h1 className="font-semibold text-3xl text-blackgray">124,000 so'm</h1>
             </div>
           </div>
-          <div className="flex flex-col gap-4 flex-1 ml-2">
-            <h1 className="font-semibold text-blackgray text-lg">Pitsa kattaligi</h1>
-            <div>
-              <Toggler values={["Kichik", "O'rtacha", "Katta"]} />
+
+          <div className="h-full flex-1">
+            <div id="scrollnav" className="flex flex-col gap-4 max-h-[490px] overflow-auto pb-3 px-1">
+              <h1 className="font-semibold text-blackgray text-lg">Pitsa kattaligi</h1>
+              <div className="space-y-2.5">
+                <Toggler values={["Kichik", "O'rtacha", "Katta"]} setSelect={setSelectSize} />
+                <div className="w-full flex gap-3">
+                  <div className="flex-1">
+                    {selectPizzaSize === "O'rtacha" || selectPizzaSize === "Katta" ? (
+                      <Toggler values={["Yupqa", "Qalin"]} />
+                    ) : (
+                      <Toggler values={["Qalin"]} />
+                    )}
+                  </div>
+                  <button className="text-[15px] font-medium flex-1 h-[47px] rounded-full  bg-orange disabled:bg-toggleColor disabled:text-grayReal disabled:cursor-not-allowed">
+                    Bort Qo'shish
+                  </button>
+                </div>
+                <ProductModalMasalliqlar />
+              </div>
             </div>
+            <button className="w-[100%] bg-green rounded-full p-2.5 mt-2 text-white font-semibold">
+              Savatga qo'shish
+            </button>
           </div>
         </div>
       </div>
