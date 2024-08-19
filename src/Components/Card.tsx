@@ -17,6 +17,7 @@ const Card = ({ product }: Props) => {
     if (data?.category === "combo") navigate(`/combo/${id}`);
     else {
       dispatch(addProduct(id));
+      localStorage.setItem("pizza-product", JSON.stringify(id));
     }
     localStorage.setItem("data-product", JSON.stringify(id));
   };

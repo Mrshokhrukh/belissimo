@@ -41,7 +41,10 @@ const ProductsModal = ({}: Props) => {
           </div>
 
           <div className="h-full flex-1">
-            <div id="scrollnav" className="flex flex-col gap-4 max-h-[490px] overflow-auto pb-3 px-1">
+            <div
+              id="scrollnav"
+              className="flex flex-col gap-4 min-h-[480px] max-h-[485px] overflow-auto pb-3 px-1 transition-all duration-150"
+            >
               <h1 className="font-semibold text-blackgray text-lg">Pitsa kattaligi</h1>
               <div className="space-y-2.5">
                 <Toggler values={["Kichik", "O'rtacha", "Katta"]} setSelect={setSelectSize} />
@@ -60,7 +63,11 @@ const ProductsModal = ({}: Props) => {
                 <ProductModalMasalliqlar />
               </div>
             </div>
-            <button className="w-[100%] bg-green rounded-full p-2.5 mt-2 text-white font-semibold">
+            <button
+              className="hover:bg-hoverGreen hover:text-green border border-green 
+            transition-all duration-200 w-[100%] bg-green rounded-full p-2.5 mt-2 text-white 
+            font-semibold active:bg-green active:text-white"
+            >
               Savatga qo'shish
             </button>
           </div>

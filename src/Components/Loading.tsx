@@ -1,4 +1,3 @@
-import loadingImg from "../assets/ZKZg.gif";
 
 const Loading = () => {
   return (
@@ -7,7 +6,7 @@ const Loading = () => {
       id="authmodal"
     >
       {/* <div className="relative flex items-center justify-center flex-col gap-3 p-3 bg-white shadow-cardshadow rounded-lg"> */}
-      <img src={loadingImg} alt="" className="w-[50px]" />
+      <h1 className="text-4xl">Loading...</h1>
       {/* </div> */}
     </div>
   );
