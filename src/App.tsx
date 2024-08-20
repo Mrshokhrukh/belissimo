@@ -5,6 +5,7 @@ import AuthModal from "./Components/AuthModal";
 import ContextProvider from "./hooks/ContextProvider";
 import Sidebar from "./Components/Sidebar";
 import ProductsModal from "./Components/ProductsModal";
+import { Toaster } from "react-hot-toast";
 type AppProps = {};
 
 const App: React.FC<AppProps> = () => {
@@ -16,6 +17,7 @@ const App: React.FC<AppProps> = () => {
         <AuthModal />
         <Sidebar />
         <ProductsModal />
+        <Toaster />
       </ContextProvider>
     </div>
   );

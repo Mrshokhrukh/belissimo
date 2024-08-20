@@ -1,25 +1,29 @@
 import { useNavigate } from "react-router-dom";
 import { products } from "../db/data";
-import { addProduct } from "../redux/CartSlice";
-import { useDispatch } from "react-redux";
+
 import FormatPrice from "./formatPrice";
+import { useContext } from "react";
+import { ChangeCategory } from "../hooks/ContextProvider";
 
 interface Props {
   product: any;
 }
 
 const Card = ({ product }: Props) => {
-  let dispatch = useDispatch();
   let navigate = useNavigate();
 
-  const navigateCombo = (id: any) => {
-    let data = products?.find((val) => val.id === String(id));
-    if (data?.category === "combo") navigate(`/combo/${id}`);
+  const { setIsProductModalOpen } = useContext(ChangeCategory);
+
+  const navigateCombo = (prData: any) => {
+    let data = products?.find((val) => val.id === String(prData._id));
+    if (data?.category === "combo") navigate(`/combo/${prData._id}`);
     else {
-      dispatch(addProduct(id));
-      localStorage.setItem("pizza-product", JSON.stringify(id));
+      if (prData.category === "pizza") {
+        localStorage.setItem("pizza-product", JSON.stringify(prData));
+        setIsProductModalOpen(true);
+      }
     }
-    localStorage.setItem("data-product", JSON.stringify(id));
+    localStorage.setItem("data-product", JSON.stringify(prData._id));
   };
 
   const calculateDiscount = (newprice: number, oldprice: number) => {
@@ -35,7 +39,7 @@ const Card = ({ product }: Props) => {
     <div
       className="h-[auto] hover:scale-[102%] p-3 transition duration-200 bg-white w-full rounded-xl shadow-cardshadow cursor-pointer"
       onClick={() => {
-        navigateCombo(product._id);
+        navigateCombo(product);
       }}
     >
       <img src={product.image} alt="" className="rounded-md" />

@@ -9,10 +9,18 @@ const ChangeCategory = createContext<any>("");
 const ContextProvider = ({ children }: Props) => {
   const [deliveryText, setDeliveryText] = useState("Yetkazib berish manzili tanlang");
   const [isAuthModalOpen, setIsAuthModalOpen] = useState<boolean>(false);
+  const [isProductModalOpen, setIsProductModalOpen] = useState<boolean>(false);
 
   return (
     <ChangeCategory.Provider
-      value={{ deliveryText, setDeliveryText, isAuthModalOpen, setIsAuthModalOpen }}
+      value={{
+        deliveryText,
+        setDeliveryText,
+        isAuthModalOpen,
+        setIsAuthModalOpen,
+        isProductModalOpen,
+        setIsProductModalOpen,
+      }}
     >
       {children}
     </ChangeCategory.Provider>

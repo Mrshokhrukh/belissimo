@@ -4,10 +4,10 @@ import Masalliqlar from "./Masalliqlar";
 interface Props {}
 
 const ProductModalMasalliqlar = ({}: Props) => {
-  const [pizzaId, setPizzaId] = useState("");
+  const [pizzaData, setPizzaData] = useState<any>();
   useEffect(() => {
-    let id = JSON.parse(localStorage.getItem("pizza-product") || "");
-    setPizzaId(id);
+    let data = JSON.parse(localStorage.getItem("pizza-product") || "");
+    setPizzaData(data);
   }, []);
   return (
     <div className="pt-5">
@@ -15,7 +15,7 @@ const ProductModalMasalliqlar = ({}: Props) => {
         <h1 className="font-semibold text-lg">Masalliqlarni tanlang</h1>
         <div className="bg-orange rounded-full px-4 py-1.5 font-sans font-semibold">0 / 15</div>
       </div>
-      <Masalliqlar id={pizzaId} />
+      <Masalliqlar data={pizzaData} />
     </div>
   );
 };

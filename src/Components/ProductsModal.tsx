@@ -1,42 +1,74 @@
 import { SlClose } from "react-icons/sl";
-import img from "../assets/94844930-5c66-4c12-a670-93b048169dbe.webp";
 import Toggler from "./Toggler";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductModalMasalliqlar from "./ProductModalMasalliqlar";
+import FormatPrice from "./formatPrice";
+import { ChangeCategory } from "../hooks/ContextProvider";
+import { addProduct } from "../redux/CartSlice";
+import { useDispatch } from "react-redux";
+import toast from "react-hot-toast";
+
 interface Props {}
 
 const ProductsModal = ({}: Props) => {
+  let dispatch = useDispatch();
   const [selectPizzaSize, setSelectSize] = useState("");
-  const modal = true;
+  const [pizzaData, setPizzaData] = useState<any>();
+  const { isProductModalOpen, setIsProductModalOpen } = useContext(ChangeCategory);
+
+  useEffect(() => {
+    let data = JSON.parse(localStorage.getItem("pizza-product") || "");
+    setPizzaData(data);
+  }, [isProductModalOpen]);
+
+  const addToCart = (id: any) => {
+    dispatch(addProduct(id));
+    toast.success("Mahsulot qo'shildi", {
+      position: "top-right",
+    });
+  };
+
   return (
     <div
       className={`${
-        modal ? "" : "hidden"
+        isProductModalOpen ? "" : "hidden"
       } w-[100%] h-[100%] bg-black z-[100] fixed top-0 left-0 flex items-center justify-center`}
       id="authmodal"
     >
       <div className="relative p-8 w-[900px] h-[600px] bg-white shadow-cardshadow rounded-3xl">
-        <SlClose className="absolute right-4 top-4 text-3xl cursor-pointer" onClick={() => ""} />
+        <SlClose
+          className="absolute right-4 top-4 text-3xl cursor-pointer"
+          onClick={() => setIsProductModalOpen(false)}
+        />
         <div className="flex gap-1 px-2 mt-3 relative">
           <div className="flex flex-col gap-4 flex-1">
-            <img src={img} className="max-w-[380px] object-cover cursor-pointer" alt="" />
+            <img
+              src={pizzaData?.image}
+              className="max-w-[380px] object-cover cursor-pointer"
+              alt=""
+            />
             <div className="border-b border-b-lightborder pb-4 space-y-2">
-              <h1 className="font-semibold text-3xl">Super Miks</h1>
+              <h1 className="font-semibold text-3xl">{pizzaData?.title}</h1>
               <p className="text-lightgray text-sm">
-                «Super Miks» pitsasi 1 ta pitsada 4 xil sevimli pitsalaringiz birlashmasi 😋 Hammasini va birdan tatib
-                ko‘rishni xush ko‘ruvchilar uchun nihoyatda mos keladi 🙃
+                «{pizzaData?.title}» {pizzaData?.description} 😋 🙃
               </p>
             </div>
             <div className="space-y-2 h-[80px] overflow-auto">
               <h1 className="font-semibold text-blackgray text-[16px]">
-                Tanlangan bort: <span className="text-sm font-normal ml-2 text-lightgray">Oddiy bort</span>
+                Tanlangan bort:{" "}
+                <span className="text-sm font-normal ml-2 text-lightgray">Oddiy bort</span>
               </h1>
               <h1 className="font-semibold text-blackgray text-[16px]">
-                Masalliqlar: <span className="text-sm font-normal ml-2 text-lightgray">pomidor bodring go'sht</span>
+                Masalliqlar:{" "}
+                <span className="text-sm font-normal ml-2 text-lightgray">
+                  pomidor bodring go'sht
+                </span>
               </h1>
             </div>
             <div>
-              <h1 className="font-semibold text-3xl text-blackgray">124,000 so'm</h1>
+              <h1 className="font-semibold text-3xl text-blackgray">
+                <FormatPrice price={pizzaData?.new_price} /> so'm
+              </h1>
             </div>
           </div>
 
@@ -64,6 +96,7 @@ const ProductsModal = ({}: Props) => {
               </div>
             </div>
             <button
+              onClick={() => addToCart(pizzaData._id)}
               className="hover:bg-hoverGreen hover:text-green border border-green 
             transition-all duration-200 w-[100%] bg-green rounded-full p-2.5 mt-2 text-white 
             font-semibold active:bg-green active:text-white"

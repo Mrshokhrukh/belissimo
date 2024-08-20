@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 
-
-
 const CardRightSide = ({}) => {
+  
   let sum = useSelector((state: RootState) => state.userCart.totalSum);
+
   return (
     <div>
       <div className="flex gap-3">
