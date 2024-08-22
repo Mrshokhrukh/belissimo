@@ -36,7 +36,9 @@ const Toggler = ({ values, setSelect }: Props) => {
       ) : values.length === 3 ? (
         <div
           id="toggler"
-          className={`${pizzaSize == 1 ? "left-[1%]" : pizzaSize == 2 ? "left-[34%]" : "left-[66%]"} bg-white absolute 
+          className={`${
+            pizzaSize == 1 ? "left-[1%]" : pizzaSize == 2 ? "left-[34%]" : "left-[66%]"
+          } bg-white absolute 
             ${togglerWidth} h-[40px] transition-all duration-300 shadow-toggleshadow  rounded-full cursor-pointer`}
         ></div>
       ) : values.length === 4 ? (

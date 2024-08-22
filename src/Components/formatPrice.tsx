@@ -3,7 +3,6 @@ interface Props {
 }
 
 const FormatPrice = ({ price }: Props) => {
-  
   if (!(price > 999)) {
     return price;
   }

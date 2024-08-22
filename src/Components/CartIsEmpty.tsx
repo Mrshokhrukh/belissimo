@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 
 const CartIsEmpty = () => {
@@ -7,7 +6,7 @@ const CartIsEmpty = () => {
     <div className="w-full mx-auto max-w-xl mt-10">
       <div className="flex flex-col justify-center items-center gap-10">
         <img src="https://bellissimo.uz/images/emptystate/empty-cart-icon.svg" alt="" />
-        <p className="text-2xl font-bold">Hozircha sizning savatchangiz boʻsh 😕</p>
+        <p className="text-2xl font-bold text-center">Hozircha sizning savatchangiz boʻsh 😕</p>
         <button
           className="text-white 
        font-semibold flex-1 bg-blackgray p-3 px-3.5 

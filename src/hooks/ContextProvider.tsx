@@ -10,6 +10,7 @@ const ContextProvider = ({ children }: Props) => {
   const [deliveryText, setDeliveryText] = useState("Yetkazib berish manzili tanlang");
   const [isAuthModalOpen, setIsAuthModalOpen] = useState<boolean>(false);
   const [isProductModalOpen, setIsProductModalOpen] = useState<boolean>(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   return (
     <ChangeCategory.Provider
@@ -20,6 +21,8 @@ const ContextProvider = ({ children }: Props) => {
         setIsAuthModalOpen,
         isProductModalOpen,
         setIsProductModalOpen,
+        isSidebarOpen,
+        setIsSidebarOpen,
       }}
     >
       {children}
