@@ -13,6 +13,8 @@ interface Props {}
 const ProductsModal = ({}: Props) => {
   let dispatch = useDispatch();
   const [selectPizzaSize, setSelectSize] = useState("");
+  const [_, setIsQalin] = useState("");
+
   const [pizzaData, setPizzaData] = useState<any>();
   const { isProductModalOpen, setIsProductModalOpen } = useContext(ChangeCategory);
 
@@ -85,7 +87,7 @@ const ProductsModal = ({}: Props) => {
                   <div className="w-full flex gap-3">
                     <div className="flex-1">
                       {selectPizzaSize === "O'rtacha" || selectPizzaSize === "Katta" ? (
-                        <Toggler values={["Yupqa", "Qalin"]} />
+                        <Toggler values={["Yupqa", "Qalin"]} setSelect={setIsQalin} />
                       ) : (
                         <Toggler values={["Qalin"]} />
                       )}
