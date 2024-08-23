@@ -45,7 +45,7 @@ const Card = ({ product }: Props) => {
       <img src={product.image} alt="" className="rounded-md" />
       <div className="px-1 mt-2 space-y-1">
         <h2 className="font-bold capitalize text-lg">{product.title}</h2>
-        <p className="text-sm font-light">{product.description}</p>
+        <p className="text-sm font-light line-clamp-4">{product.description}</p>
         {product.old_price && (
           <div className="flex items-center relative">
             <p className="absolute text-lightgray font-light">

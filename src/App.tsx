@@ -16,7 +16,7 @@ const App: React.FC<AppProps> = () => {
         <Outlet />
         <AuthModal />
         <Sidebar />
-        <ProductsModal />
+        {/* <ProductsModal /> */}
         <Toaster />
       </ContextProvider>
     </div>
