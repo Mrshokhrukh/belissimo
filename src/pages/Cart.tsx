@@ -17,7 +17,7 @@ const Cart = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <div
         onClick={() => navigate(-1)}
         className="md:hidden relative left-3 top-3 text-xl text-black shadow-cardshadow rounded flex items-center justify-center bg-[#eeeeee] w-[35px] cursor-pointer h-[35px]"
@@ -26,14 +26,14 @@ const Cart = () => {
       </div>
       {productData?.length > 0 ? (
         <div className="mt-8 max-w-xl mx-auto px-4">
-          <div className="grid grid-cols-5 md:gap-5 gap-2 min-h-[90vh]">
-            <div className="md:col-span-3 col-span-5 h-[200px] flex flex-col gap-2">
+          <div className="grid grid-cols-5 md:gap-5 gap-2">
+            <div className="w-full h-full md:col-span-3 col-span-5 flex flex-col gap-2">
               {productData?.map((pr: any, i: number) => {
                 return <CartProduct product={pr} key={i} resetData={setProductData} />;
               })}
               <ProductRecommendationInUserCart resetData={setProductData} />
             </div>
-            <div className="col-span-5 md:col-span-2 h-[200px]">
+            <div className="col-span-5 md:col-span-2">
               <CardRightSide productData={productData} />
             </div>
           </div>
@@ -41,7 +41,7 @@ const Cart = () => {
       ) : (
         <CartIsEmpty />
       )}
-    </>
+    </div>
   );
 };
 

@@ -6,8 +6,8 @@ const CardRightSide = ({ productData }: any) => {
   }, 0);
 
   return (
-    <div>
-      <div className="flex gap-3">
+    <div className="pb-10">
+      <div className="flex flex-col md:flex-row gap-3">
         <input
           type="number"
           className="flex-1 bg-graybtn
