@@ -1,6 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { products } from "../db/data";
-
 import FormatPrice from "./formatPrice";
 import { useContext } from "react";
 import { ChangeCategory } from "../hooks/ContextProvider";
@@ -15,8 +13,7 @@ const Card = ({ product }: Props) => {
   const { setIsProductModalOpen } = useContext(ChangeCategory);
 
   const navigateCombo = (prData: any) => {
-    let data = products?.find((val) => val.id === String(prData._id));
-    if (data?.category === "combo") navigate(`/combo/${prData._id}`);
+    if (product?.category.toLowerCase() === "combo") navigate(`/combo/${prData._id}`);
     else {
       if (prData.category === "pizza") {
         localStorage.setItem("pizza-product", JSON.stringify(prData));

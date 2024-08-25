@@ -4,17 +4,14 @@ import { useContext, useEffect, useState } from "react";
 import ProductModalMasalliqlar from "./ProductModalMasalliqlar";
 import FormatPrice from "./formatPrice";
 import { ChangeCategory } from "../hooks/ContextProvider";
-import { addProduct } from "../redux/CartSlice";
-import { useDispatch } from "react-redux";
+
 import toast from "react-hot-toast";
 
 interface Props {}
 
 const ProductsModal = ({}: Props) => {
-  let dispatch = useDispatch();
   const [selectPizzaSize, setSelectSize] = useState("");
   const [_, setIsQalin] = useState("");
-
   const [pizzaData, setPizzaData] = useState<any>();
   const { isProductModalOpen, setIsProductModalOpen } = useContext(ChangeCategory);
 
@@ -23,8 +20,16 @@ const ProductsModal = ({}: Props) => {
     setPizzaData(data);
   }, [isProductModalOpen]);
 
-  const addToCart = (id: any) => {
-    dispatch(addProduct(id));
+  const addToCart = (data: any) => {
+    let cartData = JSON.parse(localStorage.getItem("user-cart") || "[]");
+    const existingProductIndex = cartData.findIndex((item: any) => item._id === data._id);
+
+    if (existingProductIndex !== -1) {
+      cartData[existingProductIndex].quantity += 1;
+    } else {
+      cartData.push({ ...data, quantity: 1 });
+    }
+    localStorage.setItem("user-cart", JSON.stringify(cartData));
     toast.success("Mahsulot qo'shildi", {
       position: "top-right",
     });
@@ -100,7 +105,7 @@ const ProductsModal = ({}: Props) => {
                 </div>
               </div>
               <button
-                onClick={() => addToCart(pizzaData._id)}
+                onClick={() => addToCart(pizzaData)}
                 className="hover:bg-hoverGreen hover:text-green border border-green 
             transition-all duration-200 w-[100%] bg-green rounded-full p-2.5 mt-2 text-white 
             font-semibold active:bg-green active:text-white"

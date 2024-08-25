@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { products, user } from "../db/data";
-import { RootState } from "./store";
 
+const initialState = { ...user, totalSum: 0 };
 const cartSlice = createSlice({
   name: "cart",
-  initialState: { ...user, totalSum: 0 },
+  initialState,
   reducers: {
     addProduct: (state, action) => {
       if (state.cart.find((item: any) => item.id === action.payload)) {
@@ -43,11 +43,12 @@ const cartSlice = createSlice({
       );
     },
   },
-  // extraReducers:{
-
-  // }
+  // extraReducers: (builder) => {
+  //   builder.addCase(productsApi.pending, (state) => {
+  //     state.isLoading = "loading";
+  //   });
+  // },
 });
 
 export const { addProduct, decreseQTY, increaseQTY, calculateSum } = cartSlice.actions;
-export const selectCount = (state: RootState) => state.userCart;
 export default cartSlice.reducer;

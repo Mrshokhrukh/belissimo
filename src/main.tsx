@@ -8,9 +8,9 @@ import Combo from "./pages/Combo.tsx";
 import Login from "./pages/Login.tsx";
 import Home from "./pages/Home.tsx";
 import Cart from "./pages/Cart.tsx";
-import store from "./redux/store.ts";
 import { Provider } from "react-redux";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { store } from "./redux/store.ts";
 // import { ApiProvider } from "@reduxjs/toolkit/query/react";
 // import { productsApi } from "./services/api.ts";
 

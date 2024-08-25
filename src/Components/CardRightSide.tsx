@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import FormatPrice from "./formatPrice";
 
-const CardRightSide = ({}) => {
-  
-  let sum = useSelector((state: RootState) => state.userCart.totalSum);
+const CardRightSide = ({ productData }: any) => {
+  const total = productData.reduce((sum: any, product: any) => {
+    return sum + product.new_price * product.quantity;
+  }, 0);
 
   return (
     <div>
@@ -28,7 +28,7 @@ const CardRightSide = ({}) => {
         </div>
         <div className="flex justify-between">
           <h2 className="font-semibold text-xl">Umumiy narx</h2>
-          <h2 className="font-semibold text-xl">{Number(sum)} so'm</h2>
+          <h2 className="font-semibold text-xl">{<FormatPrice price={Number(total)} />} so'm</h2>
         </div>
         <button className="hover:bg-lightgreen transition-all duration-300 border-2 border-green hover:text-green bg-green p-3 rounded-full font-semibold text-white mt-5">
           Keyingisi
