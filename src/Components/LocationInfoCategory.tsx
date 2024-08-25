@@ -9,6 +9,8 @@ type LocationInfoCategoryProps = {};
 
 const LocationInfoCategory: React.FC<LocationInfoCategoryProps> = () => {
   const { setIsSidebarOpen } = useContext(ChangeCategory);
+  let cartData = JSON.parse(localStorage.getItem("user-cart") || "[]");
+
   const navigate = useNavigate();
   return (
     <ContextProvider>
@@ -34,7 +36,7 @@ const LocationInfoCategory: React.FC<LocationInfoCategoryProps> = () => {
               className="absolute top-[-12px] right-[-12px] w-[17px] h-[17px] flex
              items-center justify-center bg-cartbtnred rounded-full text-sm text-white"
             >
-              0
+              {cartData.length}
             </span>
           </div>
         </div>

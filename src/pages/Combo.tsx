@@ -25,7 +25,7 @@ const Combo: React.FC<ComboProps> = () => {
   }
 
   return (
-    <div className="flex gap-10 max-w-xxl mt-5 justify-around items-center mx-auto">
+    <div className="flex gap-10 max-w-xxl mt-5 justify-around items-center mx-auto lg:flex-row flex-col px-3 pt-2px">
       <img src={data?.data.image} alt="" className="" />
       <div className="flex flex-col gap-2 w-[100%] max-w-[450px] pb-10">
         <ComboOptionModal

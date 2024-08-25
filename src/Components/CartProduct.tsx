@@ -1,13 +1,15 @@
 import { FiPlus } from "react-icons/fi";
 import { FiMinus } from "react-icons/fi";
 import FormatPrice from "./formatPrice";
-
+import { useRef } from "react";
+import { AiOutlineDelete } from "react-icons/ai";
 type Props = {
   product: any;
   resetData: any;
 };
 
 const CartProduct = ({ product, resetData }: Props) => {
+  let dataRef = useRef<any>();
   let cartData = JSON.parse(localStorage.getItem("user-cart") || "[]");
 
   const increaseQuant = (data: any) => {
@@ -29,8 +31,25 @@ const CartProduct = ({ product, resetData }: Props) => {
     }
   };
 
+  const hoverElement = (pos: string) => {
+    if (pos == "enter") {
+      dataRef.current.style.opacity = "1";
+    } else {
+      dataRef.current.style.opacity = "0";
+    }
+  };
+  const removeItem = (data: any) => {
+    cartData = cartData.filter((val: any) => val._id !== data._id);
+    localStorage.setItem("user-cart", JSON.stringify(cartData));
+    resetData(cartData);
+  };
+
   return (
-    <div className="w-[100%] p-3 py-3.5 px-2 pr-6 flex justify-between bg-white shadow-cardshadow rounded-2xl cursor-pointer">
+    <div
+      onMouseEnter={() => hoverElement("enter")}
+      onMouseLeave={() => hoverElement("leave")}
+      className="w-[100%] p-3 py-3.5 px-2 pr-6 flex justify-between bg-white shadow-cardshadow rounded-2xl cursor-pointer relative"
+    >
       <div className="flex items-center">
         <img src={product?.image} alt="" className="w-[120px]" />
         <div className="ml-5">
@@ -51,6 +70,17 @@ const CartProduct = ({ product, resetData }: Props) => {
         <p className="font-semibold">
           {<FormatPrice price={product.new_price * product.quantity} />} so'm
         </p>
+      </div>
+      <div
+        ref={dataRef}
+        className="opacity-0 transition-all duration-200 absolute z-10 top-[85%] right-2"
+      >
+        <button
+          onClick={() => removeItem(product)}
+          className="bg-[#ff000017] hover:bg-[#ff00002d] shadow-toggleshadow border-[1px] border-[#f00909e8] py-1 px-3 rounded text-cartbtnred"
+        >
+          <AiOutlineDelete />
+        </button>
       </div>
     </div>
   );
