@@ -1,20 +1,21 @@
-import { useEffect, useState } from "react";
-import { products } from "../db/data";
 import ComboOptionItemCard from "./ComboOptionItemCard";
 
 interface Props {
   ComboFoodModalOpen: boolean;
   setComboModalOpen: any;
+  isLoading: boolean;
+  products: any;
 }
 
-const ComboOptionModal = ({ ComboFoodModalOpen, setComboModalOpen }: Props) => {
-  const [product, setProduct] = useState<any>();
-
-  useEffect(() => {
-    let data = products.filter((dt) => dt.category === "pitsa");
-    setProduct(data);
-  }, []);
-
+const ComboOptionModal = ({
+  products,
+  isLoading,
+  ComboFoodModalOpen,
+  setComboModalOpen,
+}: Props) => {
+  if (isLoading) {
+    return null;
+  }
   return (
     <div
       className={`${
@@ -29,9 +30,11 @@ const ComboOptionModal = ({ ComboFoodModalOpen, setComboModalOpen }: Props) => {
       >
         <h1>{"Pizza"}</h1>
         <div className="grid grid-cols-2 gap-3 mt-3">
-          {product?.map((data: any) => {
-            return <ComboOptionItemCard productData={data} key={data.id} />;
-          })}
+          {products.data
+            ?.filter((dt: any) => dt.category === "pizza")
+            ?.map((data: any) => {
+              return <ComboOptionItemCard productData={data} key={data._id} />;
+            })}
         </div>
       </div>
     </div>

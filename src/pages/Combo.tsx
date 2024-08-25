@@ -16,9 +16,12 @@ const Combo: React.FC<ComboProps> = () => {
   const { data, isLoading } = useQuery(["combo-details", comboId], () => {
     return axios.get(`https://bellissimo-avt2.onrender.com/get_one_product/${comboId}`);
   });
+  const { data: products, isLoading: loading } = useQuery("products", () => {
+    return axios.get(`https://bellissimo-avt2.onrender.com/get_all_products/`);
+  });
 
-  if (isLoading) {
-    return <h1>loading</h1>;
+  if (isLoading || loading) {
+    return <h1>loading...</h1>;
   }
 
   return (
@@ -28,6 +31,8 @@ const Combo: React.FC<ComboProps> = () => {
         <ComboOptionModal
           ComboFoodModalOpen={comboFoodModalOpen}
           setComboModalOpen={setComboFoodModalOpen}
+          products={products}
+          isLoading={loading}
         />
         <ComboOptionSelection setComboModalOpen={setComboFoodModalOpen} />
         <ComboOptionSelection setComboModalOpen={setComboFoodModalOpen} />

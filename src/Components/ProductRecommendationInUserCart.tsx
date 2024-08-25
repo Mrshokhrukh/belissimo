@@ -38,7 +38,7 @@ const ProductRecommendationInUserCart = ({ resetData }: Props) => {
               <div
                 className="cursor-pointer p-3 rounded-xl min-w-[160px] h-[170px] bg-white shadow-recommended 
                 flex items-center justify-center flex-col gap-1 hover:scale-105 transition duration-300"
-                key={pr.id}
+                key={pr._id}
                 onClick={() => addToCart(pr)}
               >
                 <img src={pr?.image} alt="" />
