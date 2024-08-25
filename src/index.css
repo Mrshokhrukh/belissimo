@@ -25,14 +25,6 @@ body {
   font-family: Poppins;
 }
 
-#slide {
-  width: auto !important;
-  height: 410px !important;
-}
-#slide img {
-  height: 100% !important;
-}
-
 #scrollnav::-webkit-scrollbar {
   background-color: red;
   display: none;
@@ -69,4 +61,26 @@ body {
 #s1QvSmGpRS7hxnjjfLvCkeDmy3MprJkpWBe {
   height: 0.5px;
   background-color: rgba(128, 128, 128, 0.582);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  min-width: 900px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+  color: white;
 }

@@ -12,6 +12,7 @@ const LocationInfoCategory: React.FC<LocationInfoCategoryProps> = () => {
   let cartData = JSON.parse(localStorage.getItem("user-cart") || "[]");
 
   const navigate = useNavigate();
+
   return (
     <ContextProvider>
       <div className="flex flex-col gap-3 justify-between md:flex-row">
