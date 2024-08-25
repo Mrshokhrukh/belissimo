@@ -38,6 +38,7 @@ const CartProduct = ({ product, resetData }: Props) => {
       dataRef.current.style.opacity = "0";
     }
   };
+
   const removeItem = (data: any) => {
     cartData = cartData.filter((val: any) => val._id !== data._id);
     localStorage.setItem("user-cart", JSON.stringify(cartData));
@@ -52,13 +53,13 @@ const CartProduct = ({ product, resetData }: Props) => {
     >
       <div className="flex items-center">
         <img src={product?.image} alt="" className="w-[120px]" />
-        <div className="ml-5">
+        <div className="md:ml-5 ml-0">
           <p className="font-light text-lg">{product?.title}</p>
           <span className="text-gray font-light ">{"qalin"}</span>
         </div>
       </div>
       <div className="flex flex-col gap-1 justify-center">
-        <button className="rounded-xl p-1 bg-graybtn py-1.5 flex items-center justify-around">
+        <button className="rounded-xl p-1 bg-graybtn md:py-1.5 py-1 flex items-center justify-around">
           <span className="cursor-pointer" onClick={() => decreaseQuant(product)}>
             <FiMinus />
           </span>

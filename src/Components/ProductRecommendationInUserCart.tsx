@@ -30,7 +30,7 @@ const ProductRecommendationInUserCart = ({ resetData }: Props) => {
   return (
     <div className="mt-5 pb-10">
       <p className="font-medium text-xl">Qo'shishni maslahat beramiz</p>
-      <div className="mt-1 flex gap-2 whitespace-nowrap overflow-auto p-4">
+      <div className="mt-1 flex gap-2 whitespace-nowrap overflow-auto p-4" id="scrollbar_rec">
         {products
           .filter((val: any) => val.category != "combo")
           .map((pr: any) => {
