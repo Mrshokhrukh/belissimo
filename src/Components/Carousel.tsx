@@ -13,7 +13,7 @@ import { Navigation } from "swiper/modules";
 
 const Carousel: React.FC<CarouselProps> = () => {
   return (
-    <div className="h-[410px] min-w-full hidden md:block">
+    <div className="h-[450px] min-w-full hidden md:block">
       <Swiper
         spaceBetween={10}
         slidesPerView={1.5}
@@ -25,10 +25,17 @@ const Carousel: React.FC<CarouselProps> = () => {
           clickable: true,
         }}
         modules={[Navigation]}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
         className="mySwiper"
       >
+        <SwiperSlide className="slide">
+          <img src={img2} alt="" />
+        </SwiperSlide>
+        <SwiperSlide className="slide">
+          <img src={img3} alt="" />
+        </SwiperSlide>
+        <SwiperSlide className="slide">
+          <img src={img1} alt="" />
+        </SwiperSlide>
         <SwiperSlide className="slide">
           <img src={img2} alt="" />
         </SwiperSlide>
