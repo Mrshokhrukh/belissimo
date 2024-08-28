@@ -13,7 +13,7 @@ const Products = () => {
   if (isLoading) {
     return <Loading />;
   }
-
+  
   return (
     <Fragment>
       {categories.map((category, i) => {
